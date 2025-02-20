@@ -161,7 +161,7 @@ public class GoUtils {
     }
 
     public static  String timeStamp2Date(String seconds) {
-        if (seconds == null || seconds.isEmpty() || seconds.equals("null")) {
+        if (seconds == null || seconds.isEmpty() || "null".equals(seconds)) {
             return "";
         }
 

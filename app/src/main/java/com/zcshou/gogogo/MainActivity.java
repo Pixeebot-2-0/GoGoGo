@@ -1262,7 +1262,7 @@ public class MainActivity extends BaseActivity implements SensorEventListener {
             String searchIsLoc = ((TextView) view.findViewById(R.id.search_isLoc)).getText().toString();
 
             //如果是定位搜索
-            if (searchIsLoc.equals("1")) {
+            if ("1".equals(searchIsLoc)) {
                 String lng = ((TextView) view.findViewById(R.id.search_longitude)).getText().toString();
                 String lat = ((TextView) view.findViewById(R.id.search_latitude)).getText().toString();
                 // mMarkName = ((TextView) view.findViewById(R.id.poi_name)).getText().toString();
@@ -1290,7 +1290,7 @@ public class MainActivity extends BaseActivity implements SensorEventListener {
                 contentValues.put(DataBaseHistorySearch.DB_COLUMN_TIMESTAMP, System.currentTimeMillis() / 1000);
 
                 DataBaseHistorySearch.saveHistorySearch(mSearchHistoryDB, contentValues);
-            } else if (searchIsLoc.equals("0")) { //如果仅仅是搜索
+            } else if ("0".equals(searchIsLoc)) { //如果仅仅是搜索
                 try {
                     searchView.setQuery(searchKey, true);
                 } catch (Exception e) {
